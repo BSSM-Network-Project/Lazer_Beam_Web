@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazer's homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap">
+  <style>
+    .t {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #000;
+      font-size: 40px;
+      text-align: center;
+      position: fixed;
+      top: 5%;
+      left: 50%; /* Center the text horizontally */
+      transform: translateX(-50%); /* Center the text horizontally */
+    }
+
+    /* Styles for the table */
+    table {
+      font-family: 'Noto Sans KR', sans-serif;
+      border-collapse: collapse;
+      position: fixed;
+      top: 200px;
+      left: 300px; /* Center the table horizontally */
+      width: 400px;
+    }
+
+    /* Styles for table header and cells */
+    th, td {
+      font-size: 25px; /* Fixed the typo in '25zpx' */
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="table-responsive">
+      <div class="t">
+        <p>
+          오늘 알람이 울린 횟수 :
+        </p>
+      </div>
+      <table class="table table-boardered" id="lazer_on_table">
+        <thead>
+          <tr>
+            <th>on_place</th>
+            <th>on_time</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.6998185122293!2d128.90136002522794!3d35.18903360685575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c6cb27cf974f%3A0x3d2253f0a9da3502!2z67aA7IKw7IaM7ZSE7Yq47Juo7Ja066eI7J207Iqk7YSw6rOg65Ox7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1700642665649!5m2!1sko!2skr"
+        width="600" height="450" style="border:0; position: fixed; top: 150px; right: 200px;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </form>
+    </div> 
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>

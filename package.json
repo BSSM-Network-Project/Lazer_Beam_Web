@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "config": "^3.3.9",
+    "express": "^4.18.2",
+    "mariadb": "^3.2.2",
+    "mysql": "^2.18.1"
+  },
+  "name": "backend",
+  "description": "<hr>\r <h3>커밋 메세지</h3>",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
