@@ -9,25 +9,24 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + "/main.html")
-  // connection.query('SELECT COUNT(*) as count FROM lazer_on', (countError, countResult) => {
-  //   if (countError) throw countError;
+   connection.query('SELECT COUNT(*) as count FROM lazer_on', (countError, countResult) => {
+     if (countError) throw countError;
 
-  //   const rowCount = countResult[0].count;
+     const rowCount = countResult[0].count;
 
-  //   connection.query('SELECT on_time FROM lazer_on ORDER BY on_time DESC', (selectError, selectResult) => {
-  //     if (selectError) throw selectError;
+     connection.query('SELECT on_time, on_place FROM lazer_on ORDER BY on_time DESC', (selectError, selectResult) => {
+       if (selectError) throw selectError;
 
-  //     console.log(selectResult);
+       console.log(selectResult);
 
-  //     const result = {
-  //       rowCount: rowCount,
-  //       data: selectResult
-  //     };
+       const result = {
+         rowCount: rowCount,
+         data: selectResult
+       };
 
-  //     res.send(result);
-  //   });
-  // });
+       res.send(result);
+     });
+   });
 });
 
 app.listen(app.get('port'), () => {
